@@ -1,7 +1,7 @@
 # fx-eventbus
 
 ## Description
-An implementation of **eventbus** service
+An implementation of [**eventbus**](https://github.com/fxwavelet/services/blob/master/eventbus.md) service
 
 ## Test
 `````sh
