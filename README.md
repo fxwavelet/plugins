@@ -3,6 +3,6 @@ A collection of wavelet plugins
 
 # Plugin List
 
-- eventbus
-- express
+- **eventbus**:   communicate between plugins
+- **express**:    wrapper for expressjs, provides webserver and app
 
