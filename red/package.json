@@ -1,6 +1,6 @@
 {
   "name": "fx-red",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "main": "./index.js",
   "dependencies": {
     "fx-node-red": "0.11.x",
@@ -9,7 +9,7 @@
   "plugin": {
     "consumes": [
       "logger",
-      "webapp",
+      "waveletApp",
       "server",
       "middlewares",
       "basic-authentication"
@@ -28,6 +28,7 @@
   },
   "plugin-args": {
     "--flow": "red flow file",
+    "--disableRED": "disable red",
     "--redDev": "enable dev mode, with the node red path"
   }
 }

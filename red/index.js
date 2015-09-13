@@ -4,12 +4,12 @@
 var path = require('path');
 
 if (!path.isAbsolute) {
-  path.isAbsolute = function (yourPath) {
+  path.isAbsolute = function(yourPath) {
     return path.resolve(yourPath) == path.normalize(yourPath)
   }
 }
 
-module.exports = function (options, imports, register) {
+module.exports = function(options, imports, register) {
   var logger = imports.logger.getLogger("Red");
 
   var basicAuth = imports['basic-authentication'];
@@ -20,7 +20,7 @@ module.exports = function (options, imports, register) {
   //var RED = require('./node-red-customized/red/red');
   var RED = require('fx-node-red');
 
-  var app = imports.webapp;
+  var app = imports.waveletApp;
   var server = imports.server;
   var middlewares = imports.middlewares.all(middlewareList);
 
@@ -31,7 +31,7 @@ module.exports = function (options, imports, register) {
   }
 
   /* update settings from arguments */
-  if (argv.flow) {  // flow file argument
+  if (argv.flow) { // flow file argument
     settings.flowFile = argv.flow;
   }
 
@@ -43,7 +43,7 @@ module.exports = function (options, imports, register) {
     settings.functionGlobalContext = {};
   }
 
-  settings.functionGlobalContext.getService = function (service) {
+  settings.functionGlobalContext.getService = function(service) {
     return global.runtime.getService(service);
   };
 
@@ -67,6 +67,7 @@ module.exports = function (options, imports, register) {
 
   settings.httpNodeMiddleware = function(req, res, next) {
     var i = 0;
+
     function _next(err) {
       if (err) {
         return next(err);
@@ -91,6 +92,9 @@ module.exports = function (options, imports, register) {
   // Serve the http nodes UI from /api
   app.use(settings.httpNodeRoot, RED.httpNode);
 
+  if (!argv.disableEditor && !argv.disableRED) {
+    RED.start();
+  }
 
   register(null, {
     "red": RED
