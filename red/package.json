@@ -1,0 +1,33 @@
+{
+  "name": "fx-red",
+  "version": "0.1.12",
+  "main": "./index.js",
+  "dependencies": {
+    "fx-node-red": "0.11.x",
+    "when": "3.7.x"
+  },
+  "plugin": {
+    "consumes": [
+      "logger",
+      "webapp",
+      "server",
+      "middlewares",
+      "basic-authentication"
+    ],
+    "provides": [
+      "red"
+    ]
+  },
+  "plugin-config": {
+    "flowFile": "flows.json",
+    "httpAdminRoot": "/red",
+    "httpNodeRoot": "/api",
+    "userDir": "./.node-red",
+    "nodesDir": "./plugins",
+    "disableEditor": false
+  },
+  "plugin-args": {
+    "--flow": "red flow file",
+    "--redDev": "enable dev mode, with the node red path"
+  }
+}
