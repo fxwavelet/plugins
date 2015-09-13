@@ -5,4 +5,5 @@ A collection of wavelet plugins
 
 - **eventbus**:   communicate between plugins
 - **express**:    wrapper for expressjs, provides webserver and app
-
+- **middleware**: expressjs middlewares
+- **logger**:     logger service
