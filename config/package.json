@@ -1,0 +1,14 @@
+{
+  "name": "fx-config",
+  "version": "0.0.3",
+  "main": "./index.js",
+  "engines": {
+    "node": "0.12.*"
+  },
+  "dependencies": {
+  },
+  "plugin": {
+    "consumes": [],
+    "provides": ["config"]
+  }
+}
