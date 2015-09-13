@@ -25,6 +25,7 @@ done(error, [String] permission)
 permission could be one of the following:
 - read
 - *
+- null
 
 #### basicAuth.authenticate([String] username, [String] password, [function] done)
 Authenticate by username and password
@@ -34,6 +35,7 @@ done(error, [String] permission)
 permission could be one of the following:
 - read
 - *
+- null
 
 #### basicAuth.enabled()
 check if the basic auth is enabled
