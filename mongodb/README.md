@@ -88,3 +88,9 @@ remove *doc*(s) in *collection* with *query* and *options*
 
 ##### ensureIndex(collection, name, keys, options, done)
 ensure index exist otherwise create it
+
+##### aggregate(collection, pipeline, options, done)
+aggregate
+
+##### mapReduce(collection, map, reduce, options, done)
+map reduce
