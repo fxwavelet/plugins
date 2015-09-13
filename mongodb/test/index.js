@@ -5,11 +5,11 @@ function getService(done) {
   var getMongodbService = require('../index');
 
   getMongodbService({
-      host: 'ds031319.mongolab.com',
-      port: '31319',
-      database: 'certifoto',
-      user: 'test',
-      password: 'test'
+      host: '',
+      port: '',
+      database: '',
+      user: '',
+      password: ''
     }
     , {
       logger: {
