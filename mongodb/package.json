@@ -1,0 +1,27 @@
+{
+  "name": "fx-mongodb",
+  "version": "0.1.10",
+  "main": "./index.js",
+  "engines": {
+    "node": "0.12.*"
+  },
+  "dependencies": {
+    "mongodb": "2.0.x",
+    "async": "0.9.x"
+  },
+  "devDependencies": {
+  },
+  "plugin": {
+    "consumes": ["logger"],
+    "provides": ["mongodb"]
+  },
+  "plugin-config": {
+    "host": "localhost",
+    "port": "port",
+    "database": "database",
+    "user": "user",
+    "password": "password"
+  },
+  "plugin-args": {
+  }
+}
